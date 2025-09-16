@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfume Statistics</title>
+    <style>
+        .perfume-list { display: none; margin-top: 20px; }
+        button { margin: 10px; padding: 10px 20px; }
+    </style>
 </head>
 <body>
-    
+    <h1>Perfume</h1>
+    <button onclick="showPerfume('men')">Men Perfume</button>
+    <button onclick="showPerfume('women')">Women Perfume</button>
+
+    <div id="men" class="perfume-list">
+        <h2>Men Perfume</h2>
+        <ul>
+            <li>Acqua di Gio</li>
+            <li>Dior Sauvage</li>
+            <li>Bleu de Chanel</li>
+        </ul>
+    </div>
+    <div id="women" class="perfume-list">
+        <h2>Women Perfume</h2>
+        <ul>
+            <li>Chanel No. 5</li>
+            <li>J'adore Dior</li>
+            <li>Gucci Bloom</li>
+        </ul>
+    </div>
+
+    <script>
+        function showPerfume(type) {
+            document.getElementById('men').style.display = type === 'men' ? 'block' : 'none';
+            document.getElementById('women').style.display = type === 'women' ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
