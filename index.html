@@ -42,6 +42,12 @@
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .perfume-items img.zoomed {
+      transform: scale(1.3); /* makes image 30% bigger */
+      z-index: 10;
     }
   </style>
 </head>
@@ -59,15 +65,15 @@
     <h2>Men Perfume</h2>
     <div class="perfume-items">
       <div>
-        <img src="https://via.placeholder.com/120x160?text=Acqua+di+Gio" alt="Acqua di Gio">
+        <img src="images/Men/Aquamarine.png" alt="Acqua di Gio" onclick="zoomImage(this)">
         <p>Acqua di Gio</p>
       </div>
       <div>
-        <img src="https://via.placeholder.com/120x160?text=Dior+Sauvage" alt="Dior Sauvage">
+        <img src="images/Men/AQVA Amara.png" alt="Dior Sauvage" onclick="zoomImage(this)">
         <p>Dior Sauvage</p>
       </div>
       <div>
-        <img src="https://via.placeholder.com/120x160?text=Bleu+de+Chanel" alt="Bleu de Chanel">
+        <img src="images/men/bleu.jpg" alt="Bleu de Chanel" onclick="zoomImage(this)">
         <p>Bleu de Chanel</p>
       </div>
     </div>
@@ -78,15 +84,15 @@
     <h2>Women Perfume</h2>
     <div class="perfume-items">
       <div>
-        <img src="https://via.placeholder.com/120x160?text=Chanel+No.5" alt="Chanel No. 5">
+        <img src="images/women/Sweet Temptation.png" alt="Chanel No. 5" onclick="zoomImage(this)">
         <p>Chanel No. 5</p>
       </div>
       <div>
-        <img src="https://via.placeholder.com/120x160?text=J'adore+Dior" alt="J'adore Dior">
+        <img src="images/women/Aquamarine.png" alt="J'adore Dior" onclick="zoomImage(this)">
         <p>J'adore Dior</p>
       </div>
       <div>
-        <img src="https://via.placeholder.com/120x160?text=Gucci+Bloom" alt="Gucci Bloom">
+        <img src="images/women/United color of benetton.png" alt="Gucci Bloom" onclick="zoomImage(this)">
         <p>Gucci Bloom</p>
       </div>
     </div>
@@ -96,6 +102,14 @@
     function showPerfume(type) {
       document.getElementById('men').style.display = type === 'men' ? 'block' : 'none';
       document.getElementById('women').style.display = type === 'women' ? 'block' : 'none';
+    }
+
+    function zoomImage(img) {
+      // Remove zoom from all other images
+      document.querySelectorAll('.perfume-items img').forEach(el => el.classList.remove('zoomed'));
+
+      // Toggle zoom on clicked image
+      img.classList.toggle('zoomed');
     }
   </script>
 </body>
