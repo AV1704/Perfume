@@ -4,49 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfume</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 20px;
-    }
-    .button-group {
-      margin: 20px 0;
-    }
-    button {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .perfume-list {
-      display: none;
-      margin-top: 20px;
-    }
-    .perfume-list h2 {
-      margin-bottom: 15px;
-    }
-    .perfume-items {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .perfume-items div {
-      text-align: center;
-      max-width: 150px;
-    }
-    .perfume-items img {
-      width: 120px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-  </style>
+  <link rel= "stylesheet" href = "CSS/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-  <h1>Perfume</h1>
+ 
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home </span></a>
+      <a class="nav-item nav-link" href="#">About</a>
+      <a class="nav-item nav-link" href="#">Men Perfume</a>
+      <a class="nav-item nav-link " href="#">Women Perfume</a>
+    </div>
+  </div>
+</nav>
+ <h1>Perfume</h1>
 
   <!-- Centered Buttons -->
   <div class="button-group">
@@ -91,6 +69,8 @@
       </div>
     </div>
   </div>
+
+   
 
   <script>
     function showPerfume(type) {

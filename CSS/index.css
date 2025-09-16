@@ -1,0 +1,38 @@
+   body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    .button-group {
+      margin: 20px 0;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .perfume-list {
+      display: none;
+      margin-top: 20px;
+    }
+    .perfume-list h2 {
+      margin-bottom: 15px;
+    }
+    .perfume-items {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .perfume-items div {
+      text-align: center;
+      max-width: 150px;
+    }
+    .perfume-items img {
+      width: 120px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
